@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket World Cup 2023 Data</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        li {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #007bff;
+        }
+
+        form {
+            margin: 15px 0;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>ACS - Cricket World Cup 2023 Data</h1>
+    <ul>
+        <li><a href="/create-tables">Create Tables</a></li>
+        <li><a href="/show-tables">Show Tables</a></li>
+        <li><a href="/delete-tables">Delete Tables</a></li>
+        <li><a href="/show-teams">Show Teams Table</a></li>
+        <li><a href="/show-match-data">Show Match Table</a></li>
+        <li>
+            <form action="/load-data" method="post">  <!-- Set the method to post -->
+                <button type="submit">Load Data</button>
+            </form>
+        </li>
+
+    </ul>
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches for Team</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Matches for Team</h1>
+
+    <!-- Display the matches won count -->
+    <p>Total Matches Won: {{ matches_won_count }} </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Match ID</th>
+                <th>Team A</th>
+                <th>Team B</th>
+                <th>Score A</th>
+                <th>Score B</th>
+                <th>Winning Team</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for match in matches_data %}
+                <tr>
+                    <td>{{ match.match_id }}</td>
+                    <td>{{ match.TeamA_name }}</td>
+                    <td>{{ match.TeamB_name }}</td>
+                    <td>{{ match.Score_A }}</td>
+                    <td>{{ match.Score_B }}</td>
+                    <td>{{ match.Wining_Team }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

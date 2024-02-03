@@ -1,0 +1,68 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams Data</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Add this style to ensure the dropdown menu is visible */
+        select {
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teams Data</h1>
+
+    <!-- Add a new form for showing matches for a particular team -->
+    <form action="/show-matches-for-team" method="post">
+        <label for="teamDropdown">Select Team:</label>
+        <!-- Ensure the name attribute is "team_id" for proper form submission -->
+        <select name="team_id" id="teamDropdown">
+            <!-- Check if teams_data is not empty before iterating -->
+            {% if teams_data %}
+                {% for team in teams_data %}
+                    <option value="{{ team.team_id }}">{{ team.team_name }}</option>
+                {% endfor %}
+            {% else %}
+                <option value="" disabled>No teams available</option>
+            {% endif %}
+        </select>
+        <button type="submit">Show Team Matches</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Team Id</th>
+                <th>Team Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for team in teams_data %}
+                <tr>
+                    <td>{{ team.team_id }}</td>
+                    <td>{{ team.team_name }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

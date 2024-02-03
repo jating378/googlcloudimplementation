@@ -1,0 +1,16 @@
+Cloud SQL Web App
+Overview
+This is a simple web application that utilizes Google Cloud SQL to manage data stored in tables. The application is built with Flask and PyMySQL to interact with the Cloud SQL database.
+Made for academic purposes and to show comparison between cloud sql vs cloud storage
+Features
+CSV Data Loading: Upload and load data from CSV files into the Cloud SQL database.
+
+Table Management: Create and delete tables in the Cloud SQL database.
+
+used cloud-sql-proxy auth for making connecting to instance available in google cloud sql
+
+Prerequisites
+Python (>=3.6)
+cloud-sql-proxy
+flask
+pymysql
