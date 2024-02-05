@@ -77,11 +77,30 @@
         <li><a href="/delete-tables">Delete Tables</a></li>
         <li><a href="/show-teams">Show Teams Table</a></li>
         <li><a href="/show-match-data">Show Match Table</a></li>
-        <li>
-            <form action="/load-data" method="post">  <!-- Set the method to post -->
-                <button type="submit">Load Data</button>
+         <li>
+
+            <form action="/load-data/2000" method="post">
+                <button type="submit">Load 2000 Entries</button>
             </form>
         </li>
+        <li>
+
+            <form action="/load-data/5000" method="post">
+                <button type="submit">Load 5000 Entries</button>
+            </form>
+        </li>
+        <li>
+
+            <form action="/load-data/full" method="post">
+                <button type="submit">Load Full Data</button>
+            </form>
+
+        <li>
+
+    <form action="/delete-data" method="post">
+        <button type="submit">Delete Data</button>
+    </form>
+</li>
 
     </ul>
 </body>
